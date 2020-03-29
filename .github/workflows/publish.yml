@@ -22,7 +22,7 @@ jobs:
     - name: Prepare repository
       run: git checkout "${GITHUB_REF:11}"
     - name: Install dependencies
-      run: npm install lerna -g
+      run: npm i
     - name: Authenticate with Registry
       run: |
           yarn logout

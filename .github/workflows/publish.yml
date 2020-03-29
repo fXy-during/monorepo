@@ -35,7 +35,7 @@ jobs:
       env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: Publish with Lerna
-      run: npx lerna publish --yes --message 'chore(release)'
+      run: npx lerna publish --yes --message 'chore(release)' --cd-version=patch
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

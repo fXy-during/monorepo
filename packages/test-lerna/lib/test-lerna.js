@@ -17,5 +17,6 @@ function add(a, b) {
 }
 
 function double(a) {
+  if (!a) return 0;
   return a * 2;
 }

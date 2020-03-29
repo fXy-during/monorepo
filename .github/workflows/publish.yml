@@ -16,7 +16,7 @@ jobs:
       run: |
         git config --global user.name 'bethon'
         git config --global user.email 'fxy1044667399@163.com'
-        git remote set-url origin https://github.com/fXy-during/monorepo.git
+        git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Prepare repository
@@ -35,7 +35,7 @@ jobs:
       env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: Publish with Lerna
-      run: npx lerna publish --yes --repo-version 1.0.7 --skip-git
+      run: npx lerna publish --yes --repo-version 1.0.8
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

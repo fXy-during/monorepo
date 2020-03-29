@@ -1,10 +1,9 @@
-'use strict';
-
-const rp = require('request-promise')
+"use strict";
 
 module.exports = testLerna;
 
 function testLerna() {
-    // TODO
-    // rp.get(/)
+  // TODO
+  const randomString = Math.random() * 100 + 1;
+  console.log("you luck number is :", randomString);
 }

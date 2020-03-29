@@ -19,14 +19,12 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - name: action-lerna
-      uses: m19c/action-lerna@1.0.0
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm run i
+    - run: npm install lerna -g
     - run: lerna run test
       env:
         CI: true

@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = { testLerna, add };
+module.exports = { testLerna, add, double };
 
 function testLerna() {
   // TODO
@@ -14,4 +14,8 @@ function add(a, b) {
   } else {
     return 0;
   }
+}
+
+function double(a) {
+  return a * 2;
 }

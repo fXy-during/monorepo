@@ -26,7 +26,7 @@ jobs:
     - name: Authenticate with Registry
       run: |
           yarn logout
-          echo "bethon/gatsby-theme-novela:registry=http://registry.npmjs.org/" > .npmrc
+          echo "fXy-during/monorepo:registry=http://registry.npmjs.org/" > .npmrc
           echo "registry=http://registry.npmjs.org/" >> .npmrc
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
           npm whoami

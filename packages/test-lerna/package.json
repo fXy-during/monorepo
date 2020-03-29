@@ -14,9 +14,10 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
+    "jest": "^25.2.3",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
   },

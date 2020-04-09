@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
     - name: Git Identity
       run: |
         git config --global user.name 'bethon'
@@ -19,10 +21,10 @@ jobs:
         git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Prepare repository
-      run: git checkout v"${GITHUB_REF:11}"
-    - name: Pulling
-      run: git checkout master
+    # - name: Prepare repository
+    #   run: git checkout v"${GITHUB_REF:11}"
+    # - name: Pulling
+    #   run: git checkout master
     - name: Install dependencies
       run: npm i
     - name: Authenticate with Registry

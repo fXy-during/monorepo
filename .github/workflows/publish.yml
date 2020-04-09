@@ -20,7 +20,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Prepare repository
-      run: git checkout "${GITHUB_REF:11}"
+      run: git checkout v"${GITHUB_REF:11}"
     - name: Pulling
       run: git pull
     - name: Install dependencies

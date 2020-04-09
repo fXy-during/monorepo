@@ -23,8 +23,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     # - name: Prepare repository
     #   run: git checkout v"${GITHUB_REF:11}"
-    # - name: Pulling
-    #   run: git checkout master
+    - name: Pulling
+      run: git pull
     - name: Install dependencies
       run: npm i
     - name: Authenticate with Registry
